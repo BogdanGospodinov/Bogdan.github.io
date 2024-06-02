@@ -1,0 +1,190 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: #cfcfcf;
+}
+
+/* Container styling */
+.container {
+    max-width: 900px;
+    margin: 0px auto;
+}
+
+/* Apply-box styling */
+.apply-box {
+    max-width: 300px;
+    padding: 20px;
+    margin: 0px auto;
+    margin-top: 50px;
+    border: 1px solid rgba(225, 225, 225, 0.3);
+    background: rgba(225, 225, 225, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;        
+}
+
+/* Navbar styling */
+.navbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #777777;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo styling */
+.logo img {
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Nav links styling */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links .btn {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+}
+
+.nav-links .btn::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav-links .btn:hover::after {
+    width: 100%;
+}
+
+.nav-links .btn.current-page {
+    color: black; /* Highlight color for the current page button */
+}
+
+/* Title container styling */
+.title-container {
+    padding: 100px 20px 20px; /* Add padding to position the title */
+    text-align: center; /* Center align the title */
+}
+
+/* Courses container styling */
+.courses-container {
+    display: flex; /* Use Flexbox */
+    flex-wrap: wrap; /* Allow wrapping to next row if needed */
+    justify-content: space-around; /* Distribute items evenly with space around */
+    gap: 20px; /* Ensure there is a gap between the items */
+    margin-top: 20px; /* Add some margin at the top */
+}
+
+/* Course link styling */
+.course-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    flex: 0 1 calc(30% - 20px); /* Maintain the same flexbox layout */
+}
+
+.course-link .course-box {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Add some top margin for spacing */
+    position: relative;
+    height: 400px; /* Set a fixed height for all course boxes */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.course-link .course-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-label {
+    background-color: #EAFDC6;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 4px 4px 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.course-label-dark {
+    background-color: #10162F;
+    color: white;
+}
+
+.course-box h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.course-box p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+
+.course-footer {
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    position: relative;
+}
+
+/* Course footer row styling */
+.course-footer-row {
+    padding-top: 10px;
+    position: relative;
+}
+
+.course-footer-row::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1.5px dotted gray; /* Dotted line */
+}
+
+.course-footer-row span {
+    position: relative;
+    z-index: 1;
+}
+
+

@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0px     auto; /* Added margin-top to move the form down slightly */
+    padding: 20px;
+}
+
+.apply-box {
+    max-width: 600px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: 1px solid rgba(234, 234, 234, 0.3);
+    background: rgba(231, 230, 230, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;        
+}
+
+.title-small {
+    font-size: 20px;
+}
+
+.form-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    padding: 6px 10px;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+    font-size: 15px;
+    height: 38px;
+}
+
+textarea {
+    height: 38px; /* Make the textarea the same height as input fields */
+    line-height: 26px; /* Adjust the line-height to vertically center text */
+    resize: none; /* Prevent resizing */
+}
+
+
+input:focus {
+    outline-color: royalblue;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    grid-column: 1 / -1; /* Ensure it spans across the entire form */
+}
+
+button {
+    background-color: royalblue;
+    border: transparent solid 2px;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 20px; /* Added padding for better button size */
+}
+
+button:hover {
+    background-color: red;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+
+.textarea-control {
+    grid-column: 1 / span 2;
+}
+
+.textarea-control textarea {
+    width: 100%;
+}
+
+@media (max-width: 460px) {
+    .textarea-control {
+        grid-column: 1 / span 1;
+    }
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #777777;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links .btn {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+}
+
+.nav-links .btn::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav-links .btn:hover::after {
+    width: 100%;
+}
+
+.nav-links .btn.current-page {
+    color: black; /* Highlight color for the current page button */
+}
+
+.main {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #cfcfcf;
+}
